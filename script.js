@@ -1,4 +1,4 @@
-// Initialize waffle count variable
+// Initialize waffle count variable for index.html
 let waffleCount = 0;
 
 // Grab elements from the HTML
@@ -17,6 +17,7 @@ if (waffleBtn) {
         }
     });
 }
+
 // Check Vibe feature for tour.html
 const vibeBtn = document.getElementById('vibeBtn');
 const vibeResult = document.getElementById('vibeResult');
