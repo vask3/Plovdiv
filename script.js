@@ -1,27 +1,24 @@
 let waffleCount = 0; 
-// Initialize waffle count variable for index.html
-let waffleCount = 0;
 
 const waffleBtn = document.getElementById('waffleBtn');
 const counterDisplay = document.getElementById('counter');
 
-if (waffleBtn) {
+if (waffleBtn && counterDisplay) {
     waffleBtn.addEventListener('click', function() {
         waffleCount = waffleCount + 1; 
         
         counterDisplay.textContent = "Waffles eaten: " + waffleCount;
         
-        if (waffleCount == 5) {
+        if (waffleCount === 5) {
             waffleBtn.textContent = "Maina Power Unlocked! 🔥";
         }
     });
 }
 
-// Check Vibe feature for tour.html
 const vibeBtn = document.getElementById('vibeBtn');
 const vibeResult = document.getElementById('vibeResult');
 
-if (vibeBtn) {
+if (vibeBtn && vibeResult) {
     vibeBtn.addEventListener('click', function() {
         const vibes = [
             "Top Maina! Certified 100% authentic Plovdiv waffle energy! 🧇🔥",
