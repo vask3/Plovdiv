@@ -32,4 +32,13 @@ if (vibeBtn && vibeResult) {
         
         vibeResult.textContent = randomVibe;
     });
+
+    setInterval(function() {
+        if (vibeBtn.style.transform === "scale(1.05)") {
+            vibeBtn.style.transform = "scale(1)";
+        } else {
+            vibeBtn.style.transform = "scale(1.05)";
+            vibeBtn.style.transition = "transform 0.3s ease";
+        }
+    }, 3000);
 }
