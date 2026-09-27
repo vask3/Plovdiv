@@ -1,23 +1,20 @@
-// Initialize waffle count variable
-let waffleCount = 0;
+let waffleCount = 0; 
 
-// Grab elements from the HTML
 const waffleBtn = document.getElementById('waffleBtn');
 const counterDisplay = document.getElementById('counter');
 
-// Check if the button exists on this page before adding event listener
 if (waffleBtn) {
     waffleBtn.addEventListener('click', function() {
-        waffleCount++;
+        waffleCount = waffleCount + 1; 
+        
         counterDisplay.textContent = "Waffles eaten: " + waffleCount;
         
-        // Change button text dynamically as an extra feature
-        if (waffleCount === 5) {
+        if (waffleCount == 5) {
             waffleBtn.textContent = "Maina Power Unlocked! 🔥";
         }
     });
 }
-// Check Vibe feature for tour.html
+
 const vibeBtn = document.getElementById('vibeBtn');
 const vibeResult = document.getElementById('vibeResult');
 
@@ -30,8 +27,9 @@ if (vibeBtn) {
             "Absolute legend! The Seven Hills bow to your snack power! ⛰️"
         ];
         
-        // Pick a random message
-        const randomVibe = vibes[Math.floor(Math.random() * vibes.length)];
+        const randomIndex = Math.floor(Math.random() * vibes.length);
+        const randomVibe = vibes[randomIndex];
+        
         vibeResult.textContent = randomVibe;
     });
 }
